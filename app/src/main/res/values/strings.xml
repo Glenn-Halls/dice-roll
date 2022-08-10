@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Coins" "\'n\'" "Dice</string>
     <string name="roll">Roll</string>
+    <string name="image_placeholder">Placeholder for an image to be displayed later</string>
 </resources>
