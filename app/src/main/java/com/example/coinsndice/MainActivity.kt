@@ -3,6 +3,7 @@ package com.example.coinsndice
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 
@@ -20,10 +21,18 @@ class MainActivity : AppCompatActivity() {
     private fun rollDie() {
         val die = Die(6)
         val dieRoll = die.roll()
-        val resultTextView: TextView = findViewById(R.id.textView)
-        resultTextView.text = dieRoll.toString()
-    }
 
+        val dieImage: ImageView = findViewById(R.id.imageView)
+
+        when (dieRoll) {
+            1 -> dieImage.setImageResource(R.drawable.dice_1)
+            2 -> dieImage.setImageResource(R.drawable.dice_2)
+            3 -> dieImage.setImageResource(R.drawable.dice_3)
+            4 -> dieImage.setImageResource(R.drawable.dice_4)
+            5 -> dieImage.setImageResource(R.drawable.dice_5)
+            6 -> dieImage.setImageResource(R.drawable.dice_6)
+        }
+    }
 }
 
 // Creates a Die with [numSides] sides
