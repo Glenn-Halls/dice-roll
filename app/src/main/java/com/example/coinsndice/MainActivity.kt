@@ -44,7 +44,6 @@ class MainActivity : AppCompatActivity() {
 
         // Update content description with number on die
         dieImage.contentDescription = dieRoll.toString()
-
     }
 }
 
